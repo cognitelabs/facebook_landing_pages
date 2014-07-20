@@ -1,0 +1,12 @@
+<h1>Pages</h1>
+<%= link_to "Create new", new_page_path, class: 'btn btn-primary pull-right' %><br /><br />
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% @pages.each do |page| %>
+    <tr>
+      <th><%= link_to page.name, page %></th>
+    </tr>
+  <% end %>
+</table>
