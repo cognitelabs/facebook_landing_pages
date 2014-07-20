@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {registrations: "users/registrations", sessions: "users/sessions", passwords: "users/passwords", omniauth_callbacks: "users/omniauth_callbacks"}, skip: [:sessions, :registrations]
-  resources :pages
+  resources :pages do
+    collection do
+      post :page_contents
+      get :page_contents
+      post :page_added_to_facebook
+      get :page_added_to_facebook
+    end
+  end
   root 'pages#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

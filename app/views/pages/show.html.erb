@@ -1,5 +1,15 @@
+<span class="pull-right"><%= add_to_page_link(@page) %></span>
+
 <h1><%= @page.name %></h1>
 <h2>HTML</h2>
 <pre><%= @page.html %></pre>
 <h2>CSS</h2>
 <pre><%= @page.css %></pre>
+
+<hr />
+<h3>Facebook pages this page is added to:</h3>
+<ul>
+  <% @page.facebook_pages.each do |fb_page| %>
+    <li><%= link_to fb_page.fb_page_id, "https://facebook.com/#{fb_page.fb_page_id}" %></li>
+  <% end %>
+</ul>

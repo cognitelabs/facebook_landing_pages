@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
+gem 'thin'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -50,6 +50,7 @@ gem 'rails_12factor'
 gem 'rails_serve_static_assets'
 gem 'tzinfo-data'
 gem 'validates_formatting_of'
+gem 'koala'
 
 group :development, :test do
   gem 'dotenv-rails'
