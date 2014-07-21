@@ -1,4 +1,7 @@
-<span class="pull-right"><%= add_to_page_link(@page) %></span>
+<span class="pull-right">
+  <%= add_to_page_link(@page) %>
+  <%= link_to "Edit", edit_page_path(@page), class: 'btn btn-primary' %>
+</span>
 
 <h1><%= @page.name %></h1>
 <h2>HTML</h2>

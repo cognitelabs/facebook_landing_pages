@@ -1,11 +1,13 @@
 class PagesController < ApplicationController
+  load_and_authorize_resource except: [:page_contents]
+  before_filter :authenticate_user!, except: [:page_contents]
   skip_before_filter :verify_authenticity_token, only: [:page_contents]
 
   before_filter :allow_iframe_requests, only: [:page_contents]
   before_filter :process_signed_request, only: [:page_contents]
 
   def index
-    @pages = Page.all
+    @pages = current_user.pages.all
   end
 
   def show

@@ -51,6 +51,7 @@ gem 'rails_serve_static_assets'
 gem 'tzinfo-data'
 gem 'validates_formatting_of'
 gem 'koala'
+gem 'cancancan'
 
 group :development, :test do
   gem 'dotenv-rails'
