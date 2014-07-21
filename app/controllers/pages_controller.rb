@@ -85,7 +85,7 @@ private
 
   def process_signed_request
     if params[:signed_request]
-      oauth = Koala::Facebook::OAuth.new("529637163831148", "209503db9089469d414c98c52e9639a2")
+      oauth = Koala::Facebook::OAuth.new(APP_CONFIG.fb_app_id, APP_CONFIG.fb_secret)
       signed_request = oauth.parse_signed_request(params[:signed_request])
       session[:signed_request] = signed_request
       @fb_page_id = signed_request["page"]["id"]

@@ -1,0 +1,16 @@
+defaults: &defaults
+  fb_app_id: '529637163831149'
+  fb_secret: '209503db9089469d414c98c52e9639a2'
+
+development:
+  <<: *defaults
+  fb_app_id: '537506809710851'
+  fb_secret: 'f3837e8312682295bf1e5d4ea6213083'
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+  fb_app_id: '529637163831149'
+  fb_secret: '209503db9089469d414c98c52e9639a2'
